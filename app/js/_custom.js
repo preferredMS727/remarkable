@@ -26,7 +26,9 @@ function playVideo() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const preloader = document.querySelector(".preloader");
+  console.log('domLoaded');
+  const preloader = document.querySelector(".preloader1");
+  console.log('preloader', preloader);
   if (
     navigator.userAgent.indexOf("Safari") !== -1 &&
     navigator.userAgent.indexOf("Chrome") === -1
@@ -37,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     playVideo();
     AOS.init();
   } else {
+    console.log('animations');
     const animation = bodymovin.loadAnimation({
       container: document.getElementById("bm"),
       renderer: "svg",
@@ -44,7 +47,13 @@ document.addEventListener("DOMContentLoaded", () => {
       autoplay: true,
       path: "../data.json",
       rendererSettings: {
-        preserveAspectRatio: "xMidYMid slice"
+        context: 'canvasContext', // the canvas context
+        preserveAspectRatio: 'test', // Supports the same options as the svg element's preserveAspectRatio property
+        clearCanvas: false,
+        progressiveLoad: false, // Boolean, only svg renderer, loads dom elements when needed. Might speed up initialization for large number of elements.
+        hideOnTransparent: true, //Boolean, only svg renderer, hides elements when opacity reaches 0 (defaults to true)
+        className: 'some-css-class-name',
+        id: 'some-id'
       }
     });
 
