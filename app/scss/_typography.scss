@@ -1,0 +1,68 @@
+.h2 {
+  font-family: "BigShouldersText", sans-serif;
+  font-size: 72px;
+  line-height: 86px;
+
+  @media screen and (max-width: 1440px) {
+    font-size: 68px;
+    line-height: 82px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 64px;
+    line-height: 77px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 46px;
+    line-height: 55px;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 31px;
+    line-height: 40px;
+  }
+
+  &_white {
+    color: #ffffff;
+  }
+
+  &_dark {
+    color: $accent;
+  }
+
+  &_grey {
+    color: #7d8dac;
+  }
+}
+
+.text {
+  font-family: "TitilliumWeb", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 43px;
+  color: $text;
+
+  @media screen and (max-width: 1440px) {
+    font-size: 24px;
+    line-height: 36px;
+    font-family: "TitilliumWebLight", sans-serif;
+    font-weight: 300;
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 17px;
+    line-height: 26px;
+  }
+}

@@ -1,0 +1,7 @@
+// @import "bootstrap/scss/bootstrap-reboot.scss"; // Bootstrap Reboot collection
+// Required Core Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+@import "node_modules/aos/dist/aos";
+// Optional Theme Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
