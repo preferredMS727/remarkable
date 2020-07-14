@@ -1891,7 +1891,7 @@ document.addEventListener("DOMContentLoaded", () => {
         messageFormData.append('message', i);
         try {
             const t = await fetch(
-                "https://script.google.com/macros/s/AKfycbwfSOn_chLFuxQS3WbasZADBUJR9pGRvpxRnB_-/exec",
+                "https://script.google.com/macros/s/AKfycbw4eWVM2nSmJz7FUnLCUdKDC8mKJNCRpGSAC1P2/exec",
                 {
                     method: "POST",
                     body: messageFormData,
